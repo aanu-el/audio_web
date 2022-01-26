@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap");
+
+body::before {
+  display: block;
+  content: "";
+  height: 50px;
+
+  font-family: "Work Sans", sans-serif;
+}
+
+.navbar {
+  font-size: 14px;
+}
+
+audio {
+  height: 30px;
+}
+
+h2 {
+  font-weight: bold;
+}

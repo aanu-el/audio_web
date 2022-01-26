@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>AudioBook | Home</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4 fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">AudioBook</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav m-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="playlists"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Playlists
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Gospel</a></li>
+                <li><a class="dropdown-item" href="#">Pop</a></li>
+                <li><a class="dropdown-item" href="#">Rock</a></li>
+                <li><a class="dropdown-item" href="#">Afrobeats</a></li>
+                <li><a class="dropdown-item" href="#">Metallic</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recently Added</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Sign up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+    >
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>
+              Check out <span class="text-warning">Recently Added Music</span>
+            </h1>
+            <p class="lead my-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+              similique nisi ea animi incidunt atque consectetur deleniti.
+            </p>
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal">
+              Listen Now
+            </button>
+          </div>
+
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="images/music2.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Song of the week Section -->
+    <section class="bg-dark text-dark text-center p-5 p-lg-3">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-center">
+          <h6 class="rounded bg-warning p-2 lead me-3">Song of the week</h6>
+
+          <div class="card" style="width: 10rem">
+            <img src="images/music1.jpg" class="card-img-top" alt="..." />
+          </div>
+
+          <audio controls controlsList="nodownload" class="ms-3">
+            <source src="gravity.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest uploads Section -->
+    <!-- Image dimension 930x664 -->
+    <section class="p-5">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="display-5">Latest Uploads</h2>
+        </div>
+
+        <div class="row my-5 text-center g-4">
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/music1.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/music2.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/music3.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/image3.jfif"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top songs Section -->
+    <section class="p-5 bg-light">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="display-5">Top Songs</h2>
+        </div>
+
+        <div class="row my-3 text-center g-4">
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb2.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb3.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb4.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb5.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto my-5">
+          <button class="btn btn-warning btn-outline-dark" type="button">See More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section class="py-5 text-center">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="display-5">Explore Interests</h2>
+        </div>
+
+        <div class="btn-group btn-group-lg my-5" role="group">
+          <input type="radio" class="btn-check" name="exploreInterests" id="gospel-btn" autocomplete="off" checked>
+          <label class="btn btn-outline-primary" for="gospel-btn">Gospel</label>
+        
+          <input type="radio" class="btn-check" name="exploreInterests" id="pop-btn" autocomplete="off">
+          <label class="btn btn-outline-primary" for="pop-btn">Pop</label>
+        
+          <input type="radio" class="btn-check" name="exploreInterests" id="afrobeats-btn" autocomplete="off">
+          <label class="btn btn-outline-primary" for="afrobeats-btn">Afrobeats</label>
+
+          <input type="radio" class="btn-check" name="exploreInterests" id="rock-btn" autocomplete="off">
+          <label class="btn btn-outline-primary" for="rock-btn">Rock</label>
+
+          <input type="radio" class="btn-check" name="exploreInterests" id="metallic-btn" autocomplete="off">
+          <label class="btn btn-outline-primary" for="metallic-btn">Metallic</label>
+        </div>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
