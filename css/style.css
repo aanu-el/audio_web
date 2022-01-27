@@ -19,3 +19,19 @@ audio {
 h2 {
   font-weight: bold;
 }
+
+/* Explore Interest Section */
+
+.explore-tab-content {
+  display: none;
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

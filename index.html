@@ -97,10 +97,9 @@
               Check out <span class="text-warning">Recently Added Music</span>
             </h1>
             <p class="lead my-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-              similique nisi ea animi incidunt atque consectetur deleniti.
+              Check out the latest updates, explore interests and enjoy the music.
             </p>
-            <button class="btn btn-primary btn-lg" data-bs-toggle="modal">
+            <button class="btn btn-warning btn-lg" data-bs-toggle="modal">
               Listen Now
             </button>
           </div>
@@ -207,6 +206,10 @@
             </div>
           </div>
         </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto my-5">
+          <button class="btn btn-primary" type="button">See More</button>
+        </div>
       </div>
     </section>
 
@@ -287,34 +290,581 @@
         </div>
 
         <div class="d-grid gap-2 col-6 mx-auto my-5">
-          <button class="btn btn-warning btn-outline-dark" type="button">See More</button>
+          <button class="btn btn-primary" type="button">See More</button>
         </div>
       </div>
     </section>
 
-    <!-- Explore Section -->
-    <section class="py-5 text-center">
+    <!-- Explore Interest Section -->
+    <section class="bg-dark py-5 text-center text-light">
       <div class="container">
         <div class="text-center">
           <h2 class="display-5">Explore Interests</h2>
         </div>
 
-        <div class="btn-group btn-group-lg my-5" role="group">
-          <input type="radio" class="btn-check" name="exploreInterests" id="gospel-btn" autocomplete="off" checked>
+        <!-- Explore Interest Tab Button -->
+        <div class="btn-group btn-group-lg my-5 explore-tab" role="group">
+          <input
+            type="radio"
+            class="btn-check explore-tab-links"
+            name="exploreInterests"
+            id="gospel-btn"
+            autocomplete="off"
+            onclick="openTab(event, 'tab-one')"
+            checked
+          />
           <label class="btn btn-outline-primary" for="gospel-btn">Gospel</label>
-        
-          <input type="radio" class="btn-check" name="exploreInterests" id="pop-btn" autocomplete="off">
-          <label class="btn btn-outline-primary" for="pop-btn">Pop</label>
-        
-          <input type="radio" class="btn-check" name="exploreInterests" id="afrobeats-btn" autocomplete="off">
-          <label class="btn btn-outline-primary" for="afrobeats-btn">Afrobeats</label>
 
-          <input type="radio" class="btn-check" name="exploreInterests" id="rock-btn" autocomplete="off">
+          <input
+            type="radio"
+            class="btn-check explore-tab-link"
+            name="exploreInterests"
+            id="pop-btn"
+            autocomplete="off"
+            onclick="openTab(event, 'tab-two')"
+          />
+          <label class="btn btn-outline-primary" for="pop-btn">Pop</label>
+
+          <input
+            type="radio"
+            class="btn-check explore-tab-link"
+            name="exploreInterests"
+            id="afrobeats-btn"
+            autocomplete="off"
+            onclick="openTab(event, 'tab-three')"
+          />
+          <label class="btn btn-outline-primary" for="afrobeats-btn"
+            >Afrobeats</label
+          >
+
+          <input
+            type="radio"
+            class="btn-check explore-tab-link"
+            name="exploreInterests"
+            id="rock-btn"
+            autocomplete="off"
+            onclick="openTab(event, 'tab-four')"
+          />
           <label class="btn btn-outline-primary" for="rock-btn">Rock</label>
 
-          <input type="radio" class="btn-check" name="exploreInterests" id="metallic-btn" autocomplete="off">
-          <label class="btn btn-outline-primary" for="metallic-btn">Metallic</label>
+          <input
+            type="radio"
+            class="btn-check explore-tab-link"
+            name="exploreInterests"
+            id="metallic-btn"
+            autocomplete="off"
+            onclick="openTab(event, 'tab-five')"
+          />
+          <label class="btn btn-outline-primary" for="metallic-btn"
+            >Metallic</label
+          >
         </div>
+
+        <!-- explore tabs content -->
+        <!-- explore tabs content 1 -->
+        <div class="row my-3 text-center g-4 explore-tab-content" id="tab-one">
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb2.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb3.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb4.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb5.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View All Songs Button -->
+          <div class="d-flex my-5 justify-content-center">
+            <button class="btn btn-primary btn-lg" type="button">
+              All Songs
+            </button>
+          </div>
+        </div>
+
+        <!-- Explore tab content 2 -->
+        <div class="row my-3 text-center g-4 explore-tab-content" id="tab-two">
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb2.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb3.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb4.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb5.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View All Songs Button -->
+          <div class="d-flex my-5 justify-content-center">
+            <button class="btn btn-primary btn-lg" type="button">
+              All Songs
+            </button>
+          </div>
+        </div>
+
+        <!-- explore tab content 3 -->
+        <div
+          class="row my-3 text-center g-4 explore-tab-content"
+          id="tab-three"
+        >
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb2.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb3.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb4.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb5.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View All Songs Button -->
+          <div class="d-flex my-5 justify-content-center">
+            <button class="btn btn-primary btn-lg" type="button">
+              All Songs
+            </button>
+          </div>
+        </div>
+
+        <!-- Explore tab content 4 -->
+        <div class="row my-3 text-center g-4 explore-tab-content" id="tab-four">
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb2.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb3.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb4.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb5.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View All Songs Button -->
+          <div class="d-flex my-5 justify-content-center">
+            <button class="btn btn-primary btn-lg" type="button">
+              All Songs
+            </button>
+          </div>
+        </div>
+
+        <!-- Explore tab content 5 -->
+        <div class="row my-3 text-center g-4 explore-tab-content" id="tab-five">
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb2.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb3.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb4.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-dark">
+              <div class="card">
+                <img
+                  src="images/thumbnails/thumb5.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Music title</h5>
+                  <p class="card-text">By: John Wilson</p>
+                  <a href="#" class="btn btn-primary">Play Music</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View All Songs Button -->
+          <div class="d-flex my-5 justify-content-center">
+            <button class="btn btn-primary btn-lg" type="button">
+              All Songs
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Plan Section -->
+    <section id="pricing" class="py-5">
+      <div class="container-lg">
+        <div class="text-center">
+          <h2 class="display-4">Premium Membership Plans</h2>
+          <p class="lead text-muted">Choose a pricing plan to suit you</p>
+        </div>
+
+        <div class="row my-5 align-items-center justify-content-center">
+          <div class="col-8 col-lg-4 col-xl-3">
+            <div class="card border-primary border-1">
+              <div class="card-body text-center py-4">
+                <h4 class="card-title">Basic Package</h4>
+                <p class="lead card-subtitle">Streaming Plan</p>
+                <p class="display-5 my-4 text-primary fw-bold">$10.99</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">
+                  Streaming music only is available.
+                </p>
+                <a href="#" class="btn btn-outline-primary btn-lg mt-3"
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-9 col-lg-4">
+            <div class="card border-primary border-2">
+              <div class="card-header text-center text-primary">
+                Most Popular
+              </div>
+              <div class="card-body text-center py-5">
+                <h4 class="card-title">Premium Package</h4>
+                <p class="lead card-subtitle">Music download & all features</p>
+                <p class="display-5 my-4 text-primary fw-bold">$18.99</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">
+                  Stream, download, upload music, and earn your money.
+                </p>
+                <a href="#" class="btn btn-outline-primary btn-lg mt-3"
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-8 col-lg-4 col-xl-3">
+            <div class="card border-primary border-1">
+              <div class="card-body text-center py-4">
+                <h4 class="card-title">Standard Package</h4>
+                <p class="lead card-subtitle">Music Download</p>
+                <p class="display-5 my-4 text-primary fw-bold">$14.99</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">
+                  Access to stream and download music as much as you want.
+                </p>
+                <a href="#" class="btn btn-outline-primary btn-lg mt-3"
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="p-5 bg-light text-dark text-sm-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md">
+            <p class="h4">Quick Links</p>
+            <nav class="nav flex-column">
+              <a class="nav-link" aria-current="page" href="#"
+                >Privacy Policy</a
+              >
+              <a class="nav-link" href="#">FAQs</a>
+              <a class="nav-link" href="#">Terms and Conditions</a>
+            </nav>
+          </div>
+
+          <div class="col-md">
+            <p class="h4">Explore Interests</p>
+            <nav class="nav flex-column">
+              <a class="nav-link" aria-current="page" href="#">Gospel</a>
+              <a class="nav-link" href="#">Afrobeats</a>
+              <a class="nav-link" href="#">Pop</a>
+              <a class="nav-link" href="#">Promo & Latest offer</a>
+            </nav>
+          </div>
+
+          <div class="col-md">
+            <p class="h4">Sign up to get new updates</p>
+            <div class="input-group news-input py-5">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Email"
+              />
+              <button class="btn btn-dark btn-lg" type="button">Button</button>
+            </div>
+          </div>
+
+          <div></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <section class="p-4 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2022 AudioBook</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-4"
+          ><i class="bi bi-arrow-up-circle h1"></i
+        ></a>
+      </div>
     </section>
 
     <!-- Bootstrap Bundle with Popper -->
@@ -323,5 +873,8 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <!-- custom javascript -->
+    <script src="js/script.js"></script>
   </body>
 </html>
