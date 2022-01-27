@@ -4,7 +4,9 @@ body::before {
   display: block;
   content: "";
   height: 50px;
+}
 
+body {
   font-family: "Work Sans", sans-serif;
 }
 
