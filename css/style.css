@@ -24,7 +24,7 @@ h2 {
 
 /* Explore Interest Section */
 
-.explore-tab-content {
+.tab-content {
   display: none;
   animation: fadeEffect 1s;
 }

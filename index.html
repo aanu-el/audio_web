@@ -42,26 +42,13 @@
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav m-0 ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.php">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="playlists"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Playlists
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Gospel</a></li>
-                <li><a class="dropdown-item" href="#">Pop</a></li>
-                <li><a class="dropdown-item" href="#">Rock</a></li>
-                <li><a class="dropdown-item" href="#">Afrobeats</a></li>
-                <li><a class="dropdown-item" href="#">Metallic</a></li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Playlists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trending</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Recently Added</a>
@@ -120,7 +107,7 @@
         <div class="d-grid d-sm-flex align-items-center justify-content-center">
           <h6 class="rounded bg-warning p-2 lead me-3">Song of the week</h6>
 
-          <div class="card m-0 m-auto my-2 m-sm-0" style="width: 10rem;">
+          <div class="card m-0 m-auto my-2 m-sm-0" style="width: 10rem">
             <img src="images/music1.jpg" class="card-img-top" alt="..." />
           </div>
 
@@ -132,11 +119,11 @@
     </section>
 
     <!-- Latest uploads Section -->
-    <!-- Image dimension 930x664 -->
+    <!-- Image dimension 1080x1080 -->
     <section class="p-5">
       <div class="container">
         <div class="text-center">
-          <h2 class="display-5">Latest Uploads</h2>
+          <h2 class="display-4">Latest Uploads</h2>
         </div>
 
         <div class="row my-5 text-center g-4">
@@ -218,7 +205,7 @@
     <section class="p-5 bg-light">
       <div class="container">
         <div class="text-center">
-          <h2 class="display-5">Top Songs</h2>
+          <h2 class="display-4">Top Songs</h2>
         </div>
 
         <div class="row my-3 text-center g-4">
@@ -300,26 +287,26 @@
     <section class="bg-dark py-5 text-center text-light">
       <div class="container">
         <div class="text-center">
-          <h2 class="display-5">Explore Interests</h2>
+          <h2 class="display-4">Explore Interests</h2>
         </div>
 
         <!-- Explore Interest Tab Button -->
         <div class="btn-group btn-group my-5 explore-tab" role="group">
           <input
             type="radio"
-            class="btn-check explore-tab-links"
-            name="exploreInterests"
-            id="gospel-btn"
+            class="btn-check tab-links"
+            name="group-tabs"
+            id="button1"
             autocomplete="off"
             onclick="openTab(event, 'tab-one')"
             checked
           />
-          <label class="btn btn-outline-primary" for="gospel-btn">Gospel</label>
+          <label class="btn btn-outline-primary" for="button1">Gospel</label>
 
           <input
             type="radio"
-            class="btn-check explore-tab-link"
-            name="exploreInterests"
+            class="btn-check tab-link"
+            name="group-tabs"
             id="pop-btn"
             autocomplete="off"
             onclick="openTab(event, 'tab-two')"
@@ -328,8 +315,8 @@
 
           <input
             type="radio"
-            class="btn-check explore-tab-link"
-            name="exploreInterests"
+            class="btn-check tab-link"
+            name="group-tabs"
             id="afrobeats-btn"
             autocomplete="off"
             onclick="openTab(event, 'tab-three')"
@@ -340,8 +327,8 @@
 
           <input
             type="radio"
-            class="btn-check explore-tab-link"
-            name="exploreInterests"
+            class="btn-check tab-link"
+            name="group-tabs"
             id="rock-btn"
             autocomplete="off"
             onclick="openTab(event, 'tab-four')"
@@ -350,8 +337,8 @@
 
           <input
             type="radio"
-            class="btn-check explore-tab-link"
-            name="exploreInterests"
+            class="btn-check tab-link"
+            name="group-tabs"
             id="metallic-btn"
             autocomplete="off"
             onclick="openTab(event, 'tab-five')"
@@ -363,7 +350,7 @@
 
         <!-- explore tabs content -->
         <!-- explore tabs content 1 -->
-        <div class="row my-3 text-center g-4 explore-tab-content" id="tab-one">
+        <div class="row my-3 text-center g-4 tab-content" id="tab-one">
           <div class="col-md">
             <div class="card bg-dark text-dark">
               <div class="card">
@@ -440,7 +427,7 @@
         </div>
 
         <!-- Explore tab content 2 -->
-        <div class="row my-3 text-center g-4 explore-tab-content" id="tab-two">
+        <div class="row my-3 text-center g-4 tab-content" id="tab-two">
           <div class="col-md">
             <div class="card bg-dark text-dark">
               <div class="card">
@@ -517,10 +504,7 @@
         </div>
 
         <!-- explore tab content 3 -->
-        <div
-          class="row my-3 text-center g-4 explore-tab-content"
-          id="tab-three"
-        >
+        <div class="row my-3 text-center g-4 tab-content" id="tab-three">
           <div class="col-md">
             <div class="card bg-dark text-dark">
               <div class="card">
@@ -597,7 +581,7 @@
         </div>
 
         <!-- Explore tab content 4 -->
-        <div class="row my-3 text-center g-4 explore-tab-content" id="tab-four">
+        <div class="row my-3 text-center g-4 tab-content" id="tab-four">
           <div class="col-md">
             <div class="card bg-dark text-dark">
               <div class="card">
@@ -674,7 +658,7 @@
         </div>
 
         <!-- Explore tab content 5 -->
-        <div class="row my-3 text-center g-4 explore-tab-content" id="tab-five">
+        <div class="row my-3 text-center g-4 tab-content" id="tab-five">
           <div class="col-md">
             <div class="card bg-dark text-dark">
               <div class="card">

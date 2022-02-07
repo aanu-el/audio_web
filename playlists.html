@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>AudioBook | Playlists</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4 fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">AudioBook</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav m-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Playlists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trending</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recently Added</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Sign up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-dark text-light p-5 text-center text-sm-start">
+      <div class="container">
+        <div class="text-center m-sm-5">
+          <div>
+            <h1 class="text-warning display-4">Discover New Playlists</h1>
+            <p class="lead my-4 text-warning">
+              AudioBook is specially curated playlists help you cut through the
+              noise of today’s saturated music scene, <br />
+              getting you the music you love and helping you discover fresh
+              artists moving music forward.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Playlist Section -->
+    <section class="py-5 m-5 text-center">
+      <div class="container">
+        <div class="row">
+          <!-- Side Bar -->
+          <div class="col-md-4">
+            <h2 class="h4 text-muted">Browse Categories</h2>
+            <div
+              class="btn-group btn-group-lg btn-group-vertical my-3 explore-tab"
+              role="group"
+            >
+              <!-- link 1 -->
+              <input
+                type="radio"
+                class="btn-check tab-links"
+                name="group-tabs"
+                id="button1"
+                autocomplete="off"
+                onclick="openTab(event, 'tab-one')"
+                checked
+              />
+              <label class="btn btn-outline-primary" for="button1"
+                >Recently Added</label
+              >
+              <!-- Link 2 -->
+              <input
+                type="radio"
+                class="btn-check tab-link"
+                name="group-tabs"
+                id="trending-btn"
+                autocomplete="off"
+                onclick="openTab(event, 'tab-two')"
+              />
+              <label class="btn btn-outline-primary" for="trending-btn"
+                >Trending</label
+              >
+              <!-- Link 3 -->
+              <input
+                type="radio"
+                class="btn-check tab-link"
+                name="group-tabs"
+                id="topsongs-btn"
+                autocomplete="off"
+                onclick="openTab(event, 'tab-three')"
+              />
+              <label class="btn btn-outline-primary" for="topsongs-btn"
+                >Top Songs</label
+              >
+              <!-- Link 4 -->
+              <input
+                type="radio"
+                class="btn-check tab-link"
+                name="group-tabs"
+                id="gospel-btn"
+                autocomplete="off"
+                onclick="openTab(event, 'tab-four')"
+              />
+              <label class="btn btn-outline-primary" for="gospel-btn"
+                >Gospel</label
+              >
+              <!-- Link 5 -->
+              <input
+                type="radio"
+                class="btn-check tab-link"
+                name="group-tabs"
+                id="hippop-btn"
+                autocomplete="off"
+                onclick="openTab(event, 'tab-five')"
+              />
+              <label class="btn btn-outline-primary" for="hippop-btn"
+                >Hip Hop/Rap</label
+              >
+              <!-- Link 6 -->
+              <input
+                type="radio"
+                class="btn-check tab-link"
+                name="group-tabs"
+                id="blues-btn"
+                autocomplete="off"
+                onclick="openTab(event, 'tab-six')"
+              />
+              <label class="btn btn-outline-primary" for="blues-btn"
+                >Blues</label
+              >
+              <!-- Link 7 -->
+              <input
+                type="radio"
+                class="btn-check tab-link"
+                name="group-tabs"
+                id="afrobeats-btn"
+                autocomplete="off"
+                onclick="openTab(event, 'tab-seven')"
+              />
+              <label class="btn btn-outline-primary" for="afrobeats-btn"
+                >Afrobeats</label
+              >
+              <!-- Link 8 -->
+              <input
+                type="radio"
+                class="btn-check tab-link"
+                name="group-tabs"
+                id="pop-btn"
+                autocomplete="off"
+                onclick="openTab(event, 'tab-eight')"
+              />
+              <label class="btn btn-outline-primary" for="pop-btn">Pop</label>
+              <!-- Link 9 -->
+              <input
+                type="radio"
+                class="btn-check tab-link"
+                name="group-tabs"
+                id="rock-btn"
+                autocomplete="off"
+                onclick="openTab(event, 'tab-nine')"
+              />
+              <label class="btn btn-outline-primary" for="rock-btn">Rock</label>
+              <!-- Link 10 -->
+              <input
+                type="radio"
+                class="btn-check tab-link"
+                name="group-tabs"
+                id="metallic-btn"
+                autocomplete="off"
+                onclick="openTab(event, 'tab-ten')"
+              />
+              <label class="btn btn-outline-primary" for="metallic-btn"
+                >Metallic</label
+              >
+            </div>
+          </div>
+
+          <!-- Side Bar Tab Contents -->
+          <div class="col-md d-sm-grid ">
+            <div class="row my-3 text-center g-4 tab-content" id="tab-one">
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab content 2 -->
+            <div class="row my-3 text-center g-4 tab-content" id="tab-two">
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb4.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab content 3 -->
+            <div class="row my-3 text-center g-4 tab-content" id="tab-three">
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb4.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab content 4 -->
+            <div class="row my-3 text-center g-4 tab-content" id="tab-four">
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb4.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab content 5 -->
+            <div class="row my-3 text-center g-4 tab-content" id="tab-five">
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb4.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab content 6 -->
+            <div class="row my-3 text-center g-4 tab-content" id="tab-six">
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb4.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab content 7 -->
+            <div class="row my-3 text-center g-4 tab-content" id="tab-seven">
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb4.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab content 8 -->
+            <div class="row my-3 text-center g-4 tab-content" id="tab-eight">
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb4.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab content 9 -->
+            <div class="row my-3 text-center g-4 tab-content" id="tab-nine">
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb4.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab content 10 -->
+            <div class="row my-3 text-center g-4 tab-content" id="tab-ten">
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb4.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card bg-dark text-dark">
+                  <div class="card">
+                    <img
+                      src="images/thumbnails/thumb5.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Music title</h5>
+                      <p class="card-text">By: John Wilson</p>
+                      <a href="#" class="btn btn-primary">Play Music</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="p-5 mt-5 bg-light text-dark text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md">
+            <p class="h4">Quick Links</p>
+            <nav class="nav flex-column">
+              <a class="nav-link" aria-current="page" href="#"
+                >Privacy Policy</a
+              >
+              <a class="nav-link" href="#">FAQs</a>
+              <a class="nav-link" href="#">Terms and Conditions</a>
+            </nav>
+          </div>
+
+          <div class="col-md">
+            <p class="h4">Explore Interests</p>
+            <nav class="nav flex-column">
+              <a class="nav-link" aria-current="page" href="#">Gospel</a>
+              <a class="nav-link" href="#">Afrobeats</a>
+              <a class="nav-link" href="#">Pop</a>
+              <a class="nav-link" href="#">Promo & Latest offer</a>
+            </nav>
+          </div>
+
+          <div class="col-md">
+            <p class="h4">Sign up to get new updates</p>
+            <div class="input-group news-input py-5">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Email"
+              />
+              <button class="btn btn-dark btn-lg" type="button">Button</button>
+            </div>
+          </div>
+
+          <div></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <section class="p-4 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2022 AudioBook</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-4"
+          ><i class="bi bi-arrow-up-circle h1"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom Js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
