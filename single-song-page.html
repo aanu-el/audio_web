@@ -21,7 +21,7 @@
 
     <!-- Custom css -->
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/single-song.css" />
 
     <title>AudioBook | Trending Songs</title>
   </head>
@@ -121,7 +121,13 @@
                 <br class="d-sm-none" /><br class="d-sm-none" />
                 <button class="btn btn-primary btn-lg">Download Song</button>
               </div>
+              <audio controls controlsList="nodownload" class="d-none d-sm-block ms-2">
+                <source src="audio/gravity.mp3" type="audio/mpeg" />
+              </audio>
             </div>
+            <audio controls controlsList="nodownload" class="d-sm-none">
+              <source src="audio/gravity.mp3" type="audio/mpeg" />
+            </audio>
           </div>
         </div>
       </div>

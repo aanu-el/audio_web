@@ -14,10 +14,26 @@ body {
   font-size: 14px;
 }
 
+/* styling the audio */
 audio {
-  height: 30px;
+  height: 40px;
 }
 
+audio::-webkit-media-controls-panel {
+  background-color: #ffc115;
+}
+
+audio::-webkit-media-controls-current-time-display {
+  color: #fff;
+}
+
+audio::-webkit-media-controls-timeline {
+  border-radius: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Heading Tag */
 h2 {
   font-weight: bold;
 }
@@ -37,4 +53,3 @@ h2 {
     opacity: 1;
   }
 }
- 
